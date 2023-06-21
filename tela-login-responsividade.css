@@ -1,38 +1,56 @@
 @charset "UTF-8";
 
+:root{
+    --cor0PR: #0AEDAD;
+    --cor1: #52F0C3;
+    --cor2: #046E50;
+    --cor3: #256E59;
+    --cor4: #8a2be2; 
+}
 
-@media screen and (max-width: 1000px) and (max-height: 600px){
-    #login-div h1{
+@media screen and (max-width: 768px) and (min-height: 450px){
+    #Login-cabeçalho h1{
+        font-size: 2em;
+    }
+
+    #Login-cabeçalho p{
         font-size: 1.5em;
-    }
-
-    #login-div p{
-        font-size: 1.2em;
-    }
-
-    #name{
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        font-size: 1em;
-    }
-
-    #senha{
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        font-size: 1em;
-    }
-
-    .bloco-info{
-        padding: 2px;
-    }
-
-    #logar{
-        height: 30px;
-        font-size: 1.2em;
-    }
-
-    #logo{
-        height: 40px;
     }
 }
 
+
+@media screen and (orientation: landscape) and (max-width: 1000px) and
+(max-height: 600px){
+    #Login-cabeçalho h1{
+        font-size: 1.5em;
+    }
+
+    #Login-cabeçalho p{
+        font-size: 1em;
+    }
+
+    #Login-Informações{
+        gap: 2px;
+    }
+
+    #logo{ 
+        display: none;
+    }
+
+    #logar{
+        height: 100%;
+    }
+
+    #logo2{
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, var(--cor4), aqua);
+    }
+
+}

@@ -6,32 +6,39 @@
     <title>Login-Dlow</title>
     <link rel="stylesheet" href="tela-login.css">
     <link rel="stylesheet" href="tela-login-responsividade.css">
+    
 </head>
 <body>
-    <main>
         <div id="img" class="main-child"></div>
         <div id="divisor" class="main-child"></div>
         <div id="conteiner-login-div" class="main-child">
             <div id="login-div">
-                <h1>Login</h1>
-                <p>Faça seu login e venha se divertir na Dlow</p>
-                <div class="bloco-info">
-                     <label for="name"><div id="img-name" class="img-info"></div>
-                    </label>
-
-                    <div id="infname"><input type="text" name="name" id="name" placeholder="Nome"></div>
+                <header id="Login-cabeçalho" class="Login-partes">
+                    <h1>Login</h1>
+                    <p>Faça seu login e venha se divertir na Dlow</p>
+                </header>
+                <div id="Login-Informações" class="Login-partes">
+                    <div class="bloco-info">
+                        <label for="name"><div id="img-name" class="img-info"></div>
+                       </label>
+               
+                       <div id="infname"><input type="text" name="name" id="name" placeholder="Nome"></div>
+                   </div>
+                       
+                   <div class="bloco-info">
+                       <label for="senha"><div id="img-senha" class="img-info"></div></label>
+                           
+                       <div id="infsenha"><input type="password" name="senha" id="senha" placeholder="Senha">
+                       </div>
+                   </div>
                 </div>
-                    
-                <div class="bloco-info">
-                    <label for="senha"><div id="img-senha" class="img-info"></div></label>
-                        
-                    <div id="infsenha"><input type="password" name="senha" id="senha" placeholder="Senha">
-                    </div>
-                </div>
-                <input type="button" value="Logar" id="logar">
-                <div id="logo"></div>
+                <footer id="Login-footer" class="Login-partes">
+                     <input type="button" value="Logar" id="logar">
+                      <div id="logo"></div>
+                </footer>
             </div>
         </div>
-    </main>
+        <div id="logo2"><img src="tela-login/Logo.svg" alt="Logo"></div>
+
 </body>
 </html>
