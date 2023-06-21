@@ -39,22 +39,22 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 60vh;
-    width: 50%;
+
+    width: 70%;
     padding: 10px;
     background-color: var(--cor1);
     border: 2px solid blueviolet;
 }
 
 #login-div h1{
-    color: var(--cor3);
+    color: var(--cor4);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
 
 #login-div p{
-    color: var(--cor3);
+    color: var(--cor4);
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,19 +65,22 @@ main{
 #name{
     font-size: 1.2em;
     text-indent: 10px;
-    width: 100%;
-    height: 40px;
-    border: 2px solid var(--cor4);
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    border: 2px solid var(--cor0PR);
     margin-bottom: 5px;
+    border-radius: 10px;
 }
 
 
 #senha{
-    width: 100%;
-    height: 40px;
     font-size: 1.2em;
     text-indent: 10px;
-    border: 2px solid var(--cor4);
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    border: 2px solid var(--cor0PR);
+    margin-bottom: 5px;
+    border-radius: 10px;
 
 }
 #name:focus{
@@ -90,6 +93,34 @@ main{
     outline: 0;
 }
 
+.bloco-info{
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: var(--cor4);
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#img-name{
+    width: 100%;
+    height: 100%;
+    background-image: url("tela-login/face.svg");
+    
+}
+
+#img-senha{
+    width: 100%;
+    height: 100%;
+    background-image: url("tela-login/senha.svg");
+}
+
+.img-info{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+}
 
 
 #img{
@@ -110,3 +141,23 @@ main{
     background-color: blueviolet;
 }
 
+#logar{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--cor4);
+    background-color: var(--cor0PR);
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor4);
+    margin-bottom: 10px;
+}
+
+#logo{
+    width: 100%;
+    height: 60px;
+    background-image: url("tela-login/Logo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
