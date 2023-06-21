@@ -33,7 +33,7 @@ main{
 
 #conteiner-login-div{
     position: relative;
-    background-image: linear-gradient(to bottom, var(--cor0PR), var(--cor3));
+    background-image: linear-gradient(to bottom, var(--cor0PR), #578018);
 }
 
 #login-div{
