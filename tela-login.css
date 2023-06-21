@@ -39,7 +39,6 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
     width: 70%;
     padding: 10px;
     background-color: var(--cor1);
@@ -160,4 +159,10 @@ main{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+#logar:hover{
+    color: var(--cor0PR);
+    background-color: var(--cor4);
+    border: 2px solid var(--cor3);
 }
