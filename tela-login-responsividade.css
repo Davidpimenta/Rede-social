@@ -8,7 +8,7 @@
     --cor4: #8a2be2; 
 }
 
-@media screen and (max-width: 768px) and (min-height: 450px){
+@media screen and (max-width: 768px) and (min-width: 360px) and (min-height: 450px){
     #Login-cabeçalho h1{
         font-size: 2em;
     }
@@ -16,6 +16,7 @@
     #Login-cabeçalho p{
         font-size: 1.5em;
     }
+    
 }
 
 
@@ -52,5 +53,52 @@
         border-radius: 50%;
         background-image: linear-gradient(to bottom, var(--cor4), aqua);
     }
+    
+}
 
+
+@media screen and (max-width: 1300px) and (min-width: 767px) and (min-height: 600px){
+    #Login-cabeçalho h1{
+        font-size: 3em;
+    }
+
+    #Login-cabeçalho p{
+        font-size: 2.3em;
+    }
+
+    #name{
+        font-size: 1.8em;
+    }
+
+    #senha{
+        font-size: 1.8em;
+    }
+
+    #logar{
+        font-size: 2em;
+    }
+
+
+}
+
+@media screen and (min-width: 1300px){
+    #Login-cabeçalho h1{
+        font-size: 3em;
+    }
+
+    #Login-cabeçalho p{
+        font-size: 2.3em;
+    }
+
+    #name{
+        font-size: 1.8em;
+    }
+
+    #senha{
+        font-size: 1.8em;
+    }
+
+    #logar{
+        font-size: 2em;
+    }
 }

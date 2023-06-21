@@ -33,7 +33,7 @@ main{
 
 #conteiner-login-div{
     position: relative;
-    background-image: linear-gradient(to bottom, var(--cor0PR), #578018);
+    background-image: linear-gradient(to bottom, var(--cor0PR), var(--cor3));
 }
 
 #login-div{
@@ -175,6 +175,7 @@ main{
     height: 100%;
 }
 #logar:hover{
+    cursor: pointer;
     color: var(--cor0PR);
     background-color: var(--cor4);
     border: 2px solid var(--cor3);
@@ -182,7 +183,7 @@ main{
 
 #divisor{
     width: 10px;
-    background-image: linear-gradient(to bottom, blueviolet, aqua);
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor3));
     
 }
 .main-child{
