@@ -148,13 +148,23 @@ main{
 
 #logar{
     width: 100%;
-    height: 40%;
+    height: 100%;
     border-radius: 10px;
     border: 2px solid var(--cor4);
     background-color: var(--cor0PR);
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--cor4);
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#logar:hover{
+    cursor: pointer;
+    color: var(--cor0PR);
+    background-color: var(--cor4);
+    border: 2px solid var(--cor3);
 }
 
 #logo{
@@ -174,12 +184,7 @@ main{
     width: 100%;
     height: 100%;
 }
-#logar:hover{
-    cursor: pointer;
-    color: var(--cor0PR);
-    background-color: var(--cor4);
-    border: 2px solid var(--cor3);
-}
+
 
 #divisor{
     width: 10px;
@@ -192,3 +197,45 @@ main{
     background-color: blueviolet;
 }
 
+form{
+    height: 40%;
+}
+
+#erro{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--cor4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid var(--cor0PR);
+    display: none;
+    text-align: center;
+}
+
+#erro > h1{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--cor0PR);
+}
+
+#erro button{
+    cursor: pointer;
+    margin-top: 5px;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--cor4);
+    color: var(--cor4);
+    background-color: var(--cor0PR);
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#erro button:hover{
+    color: var(--cor0PR);
+    background-color: var(--cor4);
+    border: 2px solid var(--cor3);
+}

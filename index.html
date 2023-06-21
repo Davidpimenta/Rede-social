@@ -9,12 +9,13 @@
     
 </head>
 <body>
+        <button id="pagina" value="L"></button>
         <div id="img" class="main-child"></div>
         <div id="divisor" class="main-child"></div>
         <div id="conteiner-login-div" class="main-child">
             <div id="login-div">
                 <header id="Login-cabeçalho" class="Login-partes">
-                    <h1>Login</h1>
+                    <h1 id="texto">Login</h1>
                     <p>Faça seu login e venha se divertir na Dlow</p>
                 </header>
                 <div id="Login-Informações" class="Login-partes">
@@ -33,12 +34,18 @@
                    </div>
                 </div>
                 <footer id="Login-footer" class="Login-partes">
-                     <input type="button" value="Logar" id="logar">
-                      <div id="logo"></div>
+                     <form action="#" id="form">
+                        <input type="submit" value="Logar" id="logar">
+                    </form>
+                    <div id="logo"></div>
                 </footer>
             </div>
         </div>
         <div id="logo2"><img src="tela-login/Logo.svg" alt="Logo"></div>
-
-</body>
+        <div id="erro">
+            <h1>Erro!, Coloque a senha e o nome.</h1>
+            <button id="fechar">Fechar</button>
+        </div>
+        <script src="Script.js"></script>
+    </body>
 </html>
