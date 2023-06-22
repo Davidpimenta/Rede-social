@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/**Tela de Login**/
 *{
     margin: 0%;
     padding: 0%;
@@ -148,7 +149,7 @@ main{
 
 #logar{
     width: 100%;
-    height: 100%;
+    height: 40%;
     border-radius: 10px;
     border: 2px solid var(--cor4);
     background-color: var(--cor0PR);
@@ -197,9 +198,6 @@ main{
     background-color: blueviolet;
 }
 
-form{
-    height: 40%;
-}
 
 #erro{
     padding: 5px;
@@ -239,3 +237,264 @@ form{
     background-color: var(--cor4);
     border: 2px solid var(--cor3);
 }
+
+
+/**Tela de Login**/
+/**Dlow-home**/
+/**Header**/
+:root{
+    --cordlow: #ffffff;
+    --cordlow1: #ececec;
+    --cordlow2: #262626;
+}
+
+#Tela-Dlow{
+    display: block;
+}
+
+#header-Dlow{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    flex-direction: row;
+    background-color: var(--cordlow);
+    border: 1px solid var(--cordlow2);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.479);
+}
+
+#logo-header{
+    position: absolute;
+    left: 1%;
+    transform: translate(-1%);
+    width: 50px;
+    height: 50px;
+    background-image: url("tela-login/Logo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pesquisa{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url("tela-login/lupa.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+
+#home{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url("tela-login/home.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+#menu{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url("tela-login/menu.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+#perfil{
+    position: absolute;
+    left: 99%;
+    transform: translate(-99%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-image: url("tela-login/perfil.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#pesquisa:hover{
+    background-color: var(--cordlow1);
+    border-radius: 20px;
+    border: 1px solid var(--cordlow2);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#home:hover{
+    background-color: var(--cordlow1);
+    border-radius: 20px;
+    border: 1px solid var(--cordlow2);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#menu:hover{
+    background-color: var(--cordlow1);
+    border-radius: 20px;
+    border: 1px solid var(--cordlow2);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.child-header-dlow{
+    display: inline-block;
+}
+
+#nome-usuario{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -20%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+#info-pesquisar{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -38%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+
+}
+
+#info-home{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -38%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+#info-menu{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -15%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+/**Menu**/
+.opcoes{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.opcoes:hover{
+    background-color: var(--cordlow1);
+    border-radius: 20px;
+    border: 1px solid var(--cordlow2);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#notificacoes{
+    position: relative;
+    background-image: url("tela-login/notificações.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}   
+
+#grupos{
+    position: relative;
+    background-image: url("tela-login/grupos.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+#menssagens{
+    position: relative;
+    background-image: url("tela-login/menssagem.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+#postar{
+    position: relative;
+    background-image: url("tela-login/postar.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+#info-notificações{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -15%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+#info-grupos{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -15%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+#info-menssagens{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -15%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+#info-publicar{
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: -15%;
+    text-align: center;
+    background-color: var(--cordlow);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cordlow2);
+}
+
+/**Menu**/
+
+/**Header**/
+
+/**Dlow-home**/
