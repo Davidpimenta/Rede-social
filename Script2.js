@@ -40,13 +40,17 @@ info.forEach((parte) => {
             if(menuon == false){
                 menuon = true
                 var menu = document.getElementById('menuon')
-                menu.style.display = 'inline-block'
-                menu.style.transitionDuration = '2000.5s'
+                menu.style.display = 'flex'
+                info_menu.style.top = '6%'
+                info_menu.style.left = '110%'
+                
             } else {
                     menuon = false
                     var menu = document.getElementById('menuon')
                     menu.style.display = 'none'
-                    menu.style.transitionDuration = '2000.5s'
+                    info_menu.style.top = '108%'
+                    info_menu.style.left = '-15%'
+                   
             }
         }
 

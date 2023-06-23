@@ -313,9 +313,7 @@ main{
 }
 
 #perfil{
-    position: absolute;
-    left: 99%;
-    transform: translate(-99%);
+    position: relative;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -323,6 +321,12 @@ main{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#perfil-divider{
+    position: absolute;
+    left: 98%;
+    transform: translate(-98%);
 }
 
 
@@ -357,8 +361,8 @@ main{
 #nome-usuario{
     display: none;
     position: absolute;
-    top: 108%;
-    left: -20%;
+    top: 110%;
+    left: -25%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -416,6 +420,7 @@ main{
     border: 1px solid var(--cordlow2);
     box-sizing: border-box;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 #notificacoes{
@@ -454,8 +459,8 @@ main{
 #info-notificações{
     display: none;
     position: absolute;
-    top: 108%;
-    left: -15%;
+    top: 6%;
+    left: 110%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -466,8 +471,8 @@ main{
 #info-grupos{
     display: none;
     position: absolute;
-    top: 108%;
-    left: -15%;
+    top: 6%;
+    left: 110%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -478,8 +483,8 @@ main{
 #info-menssagens{
     display: none;
     position: absolute;
-    top: 108%;
-    left: -15%;
+    top: 6%;
+    left: 110%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -490,17 +495,25 @@ main{
 #info-publicar{
     display: none;
     position: absolute;
-    top: 108%;
-    left: -15%;
+    top: 6%;
+    left: 110%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
     border-radius: 8px;
     border: 1px solid var(--cordlow2);
 }
+
+#menu-divider{
+    position: relative;
+}
 #menuon{
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
 }
+
 /**Menu**/
 
 /**Header**/
