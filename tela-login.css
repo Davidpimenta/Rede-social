@@ -249,7 +249,12 @@ main{
 }
 
 #Tela-Dlow{
-    display: block;
+    display: none;
+}
+
+#header-header{
+    width: 100%;
+    position: fixed;
 }
 
 #header-Dlow{
@@ -421,6 +426,7 @@ main{
     background-size: 50% 50%;
 }   
 
+
 #grupos{
     position: relative;
     background-image: url("tela-login/grupos.svg");
@@ -492,9 +498,15 @@ main{
     border-radius: 8px;
     border: 1px solid var(--cordlow2);
 }
-
+#menuon{
+    display: none;
+}
 /**Menu**/
 
 /**Header**/
+
+/**Pagina Principal**/
+
+/**Pagina Principal**/
 
 /**Dlow-home**/

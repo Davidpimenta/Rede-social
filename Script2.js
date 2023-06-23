@@ -1,10 +1,9 @@
-var testa = document.getElementById('teste')
 var info = document.querySelectorAll('.child-header-dlow')
 var nome_usuario = document.getElementById('nome-usuario')
 var info_pesquisa = document.getElementById('info-pesquisar')
 var info_home = document.getElementById('info-home')
 var info_menu = document.getElementById('info-menu')
-
+var menuon = false
 info.forEach((parte) => {
     parte.addEventListener('mouseenter', function menssagem(){
         
@@ -34,6 +33,31 @@ info.forEach((parte) => {
         info_home.style.display = 'none'
         info_menu.style.display = 'none'
     })
+
+    parte.addEventListener('click', function funcionalidades(){
+
+        if(parte.id == 'menu'){
+            if(menuon == false){
+                menuon = true
+                var menu = document.getElementById('menuon')
+                menu.style.display = 'inline-block'
+                menu.style.transitionDuration = '2000.5s'
+            } else {
+                    menuon = false
+                    var menu = document.getElementById('menuon')
+                    menu.style.display = 'none'
+                    menu.style.transitionDuration = '2000.5s'
+            }
+        }
+
+        if(parte.id == 'home'){
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto'
+            })
+        }
+    })
+
 })
 
 
