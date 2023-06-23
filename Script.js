@@ -29,9 +29,8 @@ function verificacao(){
             var body = document.querySelector('body')
             body.style.display = 'block'
             Dlow_Home = true
-            divesquerda.style.display = 'none'
-            divdireita.style.display = 'none'
-            divmeio.style.display = 'none'
+            var tela_de_login = document.getElementById('login-tela')
+            tela_de_login.style.display = 'none'
             var tela_dlow = document.getElementById("Tela-Dlow")
             tela_dlow.style.display = 'block'
             
