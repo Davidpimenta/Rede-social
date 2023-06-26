@@ -1,15 +1,24 @@
 var info = document.querySelectorAll('.child-header-dlow')
-var nome_usuario = document.getElementById('nome-usuario')
+var nome_usuario = document.querySelector('#nome-usuario')
 var info_pesquisa = document.getElementById('info-pesquisar')
 var info_home = document.getElementById('info-home')
 var info_menu = document.getElementById('info-menu')
 var menuon = false
+var menu_info_of = false
+var pesquisaon = false
+
 info.forEach((parte) => {
     parte.addEventListener('mouseenter', function menssagem(){
         
         
         if(parte.id == 'perfil'){
-            nome_usuario.style.display = "block"
+            var posicao = nome_usuario.getBoundingClientRect().right
+            var tela = window.innerWidth
+            var nova_posicao = posicao - tela + 5
+            if(posicao > tela){
+                nome_usuario.style.left = `-${nova_posicao}px`
+            }
+            nome_usuario.style.display = 'block'
         }
 
         if(parte.id == 'pesquisa'){
@@ -21,8 +30,9 @@ info.forEach((parte) => {
         }
 
         if(parte.id == 'menu'){
-            info_menu.style.display = 'block'
-
+            if(menu_info_of == false){
+                info_menu.style.display = 'block'
+            } 
         }
 
     })
@@ -38,19 +48,17 @@ info.forEach((parte) => {
 
         if(parte.id == 'menu'){
             if(menuon == false){
+                menu_info_of = true
                 menuon = true
                 var menu = document.getElementById('menuon')
                 menu.style.display = 'flex'
-                info_menu.style.top = '6%'
-                info_menu.style.left = '110%'
-                
             } else {
+                menu_info_of = false
                     menuon = false
                     var menu = document.getElementById('menuon')
                     menu.style.display = 'none'
                     info_menu.style.top = '108%'
-                    info_menu.style.left = '-15%'
-                   
+                    info_menu.style.left = '-15%'       
             }
         }
 
@@ -59,6 +67,18 @@ info.forEach((parte) => {
                 top: 0,
                 behavior: 'auto'
             })
+        }
+
+        if(parte.id == 'pesquisa'){
+            if(pesquisaon == false){
+                pesquisaon = true
+                var barra_pesquisa = document.getElementById    ('barrapesquisa')
+                barra_pesquisa.style.display = 'block'
+            } else {
+                var barra_pesquisa = document.getElementById    ('barrapesquisa')
+                pesquisaon = false
+                barra_pesquisa.style.display = 'none'
+            }
         }
     })
 

@@ -263,7 +263,9 @@ main{
 
 #header-Dlow{
     position: relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 50px;
     padding: 5px;
@@ -317,7 +319,6 @@ main{
 }
 
 #perfil{
-    position: relative;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -366,7 +367,6 @@ main{
     display: none;
     position: absolute;
     top: 110%;
-    left: -25%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -385,6 +385,14 @@ main{
     border-radius: 8px;
     border: 1px solid var(--cordlow2);
 
+}
+
+#barrapesquisa{
+    width: 20vw;
+    height: 50%;
+    border: 2px solid var(--cordlow2);
+    display: none;
+    margin-right: 5px;
 }
 
 #info-home{
@@ -464,7 +472,7 @@ main{
     display: none;
     position: absolute;
     top: 6%;
-    left: 110%;
+    left: -220%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -476,7 +484,7 @@ main{
     display: none;
     position: absolute;
     top: 6%;
-    left: 110%;
+    left: -150%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -488,7 +496,7 @@ main{
     display: none;
     position: absolute;
     top: 6%;
-    left: 110%;
+    left: -210%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;
@@ -500,7 +508,7 @@ main{
     display: none;
     position: absolute;
     top: 6%;
-    left: 110%;
+    left: -170%;
     text-align: center;
     background-color: var(--cordlow);
     padding: 10px;

@@ -47,15 +47,25 @@ var info_pesquisa = document.getElementById('info-pesquisar')
 var info_home = document.getElementById('info-home')
 var info_menu = document.getElementById('info-menu')
 var menuon = false
+var menu_info_of = false
+var posicao = nome_usuario.getBoundingClientRect().right
+var pesquisaon = false
 info.forEach((parte) => {
     parte.addEventListener('mouseenter', function menssagem(){
-        
         
         if(parte.id == 'perfil'){
             var partesnome = nome.value.trim().split(" ")
             var nomeincial = partesnome[0]
             info_nome_usuario.innerText = nomeincial
-            nome_usuario.style.display = "block"
+            nome_usuario.style.display = 'block'
+            posicao = nome_usuario.getBoundingClientRect().right
+            var tela = window.innerWidth
+            var nova_posicao = posicao - tela + 5
+            if(posicao > tela){
+                nome_usuario.style.left = `-${nova_posicao}px` 
+            }
+            
+            
         }
 
         if(parte.id == 'pesquisa'){
@@ -67,9 +77,10 @@ info.forEach((parte) => {
         }
 
         if(parte.id == 'menu'){
-            info_menu.style.display = 'block'
-
-        }
+            if(menu_info_of == false){
+                info_menu.style.display = 'block'
+            }
+        } 
     })
     
     parte.addEventListener('mouseout', function menssagemout(){
@@ -84,18 +95,30 @@ info.forEach((parte) => {
         if(parte.id == 'menu'){
             if(menuon == false){
                 menuon = true
+                menu_info_of = true
                 var menu = document.getElementById('menuon')
                 menu.style.display = 'flex'
-                info_menu.style.top = '6%'
-                info_menu.style.left = '110%'
                 
             } else {
-                    menuon = false
-                    var menu = document.getElementById('menuon')
-                    menu.style.display = 'none'
-                    info_menu.style.top = '108%'
-                    info_menu.style.left = '-15%'
+                menu_info_of = false
+                menuon = false
+                var menu = document.getElementById('menuon')
+                menu.style.display = 'none'
+                info_menu.style.top = '108%'
+                info_menu.style.left = '-15%'
                    
+            }
+        }
+
+        if(parte.id == 'pesquisa'){
+            if(pesquisaon == false){
+                pesquisaon = true
+                var barra_pesquisa = document.getElementById    ('barrapesquisa')
+                barra_pesquisa.style.display = 'block'
+            } else {
+                var barra_pesquisa = document.getElementById    ('barrapesquisa')
+                pesquisaon = false
+                barra_pesquisa.style.display = 'none'
             }
         }
 
@@ -107,6 +130,7 @@ info.forEach((parte) => {
         }
     })
 })
+
 
 var op = document.querySelectorAll('.opcoes')
 var info_notif = document.getElementById('info-notificações')
