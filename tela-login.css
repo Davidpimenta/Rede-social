@@ -257,6 +257,7 @@ main{
 }
 
 #header-header{
+    z-index: 9999;
     width: 100%;
     position: fixed;
 }
@@ -531,7 +532,203 @@ main{
 /**Header**/
 
 /**Pagina Principal**/
+#divisor-paginas{
+    height: 55px;
+}
+#pagina-principal{
 
+    margin-top: 5px;
+    text-align: center;
+    height: 50px;
+}
+
+#pagina-principal > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+#pagina-principal > p{
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+/**Carrocel**/
+
+.slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .slides{
+    width: 400%;
+    height: 200px;
+    display: flex;
+  }
+
+  .slides input{
+    display: none;
+  }
+
+  .slide{
+    width: 25%;
+    position: relative;
+  }
+
+  .slide img{
+    width: 100vw;
+  }
+
+  .manual-navigation{
+    position: absolute;
+    width: 100vw;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover{
+    background-color: #ffff;
+  }
+
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+
+  #radio4:checked ~ .first{
+    margin-left: -75%;
+  }
+
+  #radio5:checked ~ .first{
+    margin-left: -100%;
+  }
+
+  .navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .navigation-auto{
+    position: absolute;
+    width: 100vw;
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: black;
+  }
+
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #ffff;
+  }
+
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #ffff;
+  }
+
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #ffff;
+  }
+
+  #radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: #ffff;
+  }
+
+  #texto{
+    font-size: 0.6em;
+    position: absolute;
+    width: 100vw;
+    margin-top: -110px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #links{
+    gap: 50vw;
+    position: absolute;
+    width: 100vw;
+    margin-top: -190px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button{
+    display: flex;
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+  #Nome-do-site{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #github{
+    color: purple;
+    border: 2px solid purple;
+  }
+
+  #link_site{
+    color: black;
+  }
+
+  #gitimg{
+    width: 20px
+  }
+
+  #github:hover{
+    background-color: purple;
+    color: white;
+    border: 2px solid black;
+  }
+  
+  #link_site:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+/**Carrocel**/
 /**Pagina Principal**/
 
 /**Dlow-home**/

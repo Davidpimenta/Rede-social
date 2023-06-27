@@ -1,31 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    div{
-
-      padding: 5px;
-      height: 100px;
-      background-color: red;
+    body{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: green;
     }
 
-    #a{
-      border: 0;
-      height: 100%;
-    }
-    .b{
-      width: 100px;
-      margin: 5px;
-      height: 100%;
-      background-color: wheat;
+    .slider{
+      margin: 0 auto;
+      width: 800px;
+      height: 400px;
+      overflow: hidden;
     }
 
-    #c{
+    .slides{
+      width: 400%;
+      height: 400px;
       display: flex;
     }
+
+    .slides input{
+      display: none;
+    }
+
+    .slide{
+      width: 25%;
+      position: relative;
+    }
+
+    .slide img{
+      width: 800px;
+    }
+
+    .manual-navigation{
+      position: absolute;
+      width: 800px;
+      margin-top: -60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manual-btn{
+      border: 2px solid black;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .manual-btn:not(:last-child){
+      margin-right: 40px;
+    }
+
+    .manual-btn:hover{
+      background-color: #ffff;
+    }
+
+    #radio1:checked ~ .first{
+      margin-left: 0;
+    }
+
+    #radio2:checked ~ .first{
+      margin-left: -25%;
+    }
+
+    #radio3:checked ~ .first{
+      margin-left: -50%;
+    }
+
+    #radio4:checked ~ .first{
+      margin-left: -75%;
+    }
+
+    #radio5:checked ~ .first{
+      margin-left: -100%;
+    }
+
+    .navigation-auto div{
+      border: 2px solid #20a6ff;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .navigation-auto{
+      position: absolute;
+      width: 800px;
+      margin-top: 340px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+    }
+
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+      background-color: black;
+    }
+
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+      background-color: #ffff;
+    }
+
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+      background-color: #ffff;
+    }
+
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+      background-color: #ffff;
+    }
+
+    #radio5:checked ~ .navigation-auto .auto-btn5{
+      background-color: #ffff;
+    }
+
+    #texto{
+      position: absolute;
+      width: 800px;
+      margin-top: -180px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #links{
+      gap: 15px;
+      position: absolute;
+      width: 800px;
+      margin-top: -110px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button{
+      display: flex;
+      width: 100px;
+      height: 35px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 2px solid black;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      gap: 5px;
+      border-radius: 10px;
+      transition: 0.5s;
+    }
+
+    #Nome-do-site{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #github{
+      color: purple;
+      border: 2px solid purple;
+    }
+
+    #link_site{
+      color: black;
+    }
+
+    #gitimg{
+      width: 20px
+    }
+
+    #github:hover{
+      background-color: purple;
+      color: white;
+      border: 2px solid black;
+    }
+    
+    #link_site:hover{
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+    }
+
   </style>
 </head>
 <body>
-  <div id="c"><input type="text" name="a" id="a"> <div class="b"></div></div>
+    <div class="slider">
+      
+      <div class="slides">
+
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+
+        <div class="slide first">
+          <img src="tela-login/cordel.PNG" alt="">
+        </div>
+        <div class="slide"><img src="tela-login/Celular.PNG" alt=""></div>
+        <div class="slide"><img src="tela-login/velha.PNG" alt=""></div>
+        <div class="slide"><img src="tela-login/listatarefas.PNG" alt=""></div>
+        <div class="slide"><img src="tela-login/Capturar.PNG" alt=""></div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+        </div>
+      </div>
+      
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        <label for="radio5" class="manual-btn"></label>
+      </div>
+      <div id="texto">
+        <h1 id="Nome-do-site">Cordel</h1>
+      </div>
+      <div id="links">
+        <a href="https://mixtany.github.io/Cordel/" target="_blank" class="button" id="link_site">Link do site</a>
+        <a href="https://github.com/Mixtany/Cordel" target="_blank" class="button" id="github"><img src="tela-login/github.png" alt="" id="gitimg"> GitHub</a>
+      </div>
+    </div>
+
+    <script>
+      let count = 1
+      document.getElementById('radio1').checked = true
+
+      setInterval(function(){
+        nextImage()
+      }, 3000)
+
+      setInterval(function(){
+        sites()
+      }, 5)
+      function nextImage(){
+        count++
+        if(count>5){
+          count = 1
+        }
+        document.getElementById('radio'+count).checked = true
+      }
+
+      function sites(){
+        if(document.getElementById('radio1').checked == true){
+          var titulo = document.getElementById('Nome-do-site')
+          titulo.innerText = 'Cordel'
+          titulo.style.color = 'black'
+          var botão = document.querySelectorAll('.manual-btn')
+          botão.forEach((e)=>{
+            e.style.borderColor = 'black'
+          })
+
+          var link_site = document.getElementById('link_site')
+          link_site.href = 'https://mixtany.github.io/Cordel/'
+          var github = document.getElementById('github')
+          github.href = 'https://github.com/Mixtany/Cordel'
+        }
+
+        if(document.getElementById('radio2').checked == true){
+          var titulo = document.getElementById('Nome-do-site')
+          titulo.innerText = 'Iphone'
+          titulo.style.color = 'white'
+          var botão = document.querySelectorAll('.manual-btn')
+          botão.forEach((e)=>{
+            e.style.borderColor = 'white'
+          })
+
+          var link_site = document.getElementById('link_site')
+          link_site.href = 'https://mixtany.github.io/Quarto-site/'
+          var github = document.getElementById('github')
+          github.href = 'https://github.com/Mixtany/Quarto-site'
+        }
+
+        if(document.getElementById('radio3').checked == true){
+          var titulo = document.getElementById('Nome-do-site')
+          titulo.innerText = 'Jogo da Velha'
+          titulo.style.color = 'white'
+
+          var link_site = document.getElementById('link_site')
+          link_site.href = 'https://mixtany.github.io/Decimo-primeiro-site/'
+          var github = document.getElementById('github')
+          github.href = 'https://github.com/Mixtany/Decimo-primeiro-site'
+        }
+
+        if(document.getElementById('radio4').checked == true){
+          var titulo = document.getElementById('Nome-do-site')
+          titulo.innerText = 'Lista de Afazeres'
+          titulo.style.color = 'white'
+
+          var link_site = document.getElementById('link_site')
+          link_site.href = 'https://mixtany.github.io/Decimo-segundo-site/'
+          var github = document.getElementById('github')
+          github.href = 'https://github.com/Mixtany/Decimo-segundo-site'
+        }
+
+        if(document.getElementById('radio5').checked == true){
+          var titulo = document.getElementById('Nome-do-site')
+          titulo.innerText = 'Site de Viagens'
+          titulo.style.color = 'black'
+
+          var link_site = document.getElementById('link_site')
+          link_site.href = 'https://mixtany.github.io/Terceiro-site/'
+          var github = document.getElementById('github')
+          github.href = 'https://github.com/Mixtany/Terceiro-site'
+        }
+      }
+      
+    </script>
 </body>
 </html>

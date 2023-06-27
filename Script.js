@@ -165,6 +165,91 @@ op.forEach((parte) => {
     })
 })
 //Dlow-home
+//Dlow-pagina
+//Carrocel
 
+let count = 1
+document.getElementById('radio1').checked = true
+
+setInterval(function(){
+  nextImage()
+}, 3000)
+
+setInterval(function(){
+  sites()
+}, 1000)
+function nextImage(){
+  count++
+  if(count>5){
+    count = 1
+  }
+  document.getElementById('radio'+count).checked = true
+}
+
+function sites(){
+  if(document.getElementById('radio1').checked == true){
+    var titulo = document.getElementById('Nome-do-site')
+    titulo.innerText = 'Cordel'
+    titulo.style.color = 'black'
+    var botão = document.querySelectorAll('.manual-btn')
+    botão.forEach((e)=>{
+      e.style.borderColor = 'black'
+    })
+
+    var link_site = document.getElementById('link_site')
+    link_site.href = 'https://mixtany.github.io/Cordel/'
+    var github = document.getElementById('github')
+    github.href = 'https://github.com/Mixtany/Cordel'
+  }
+
+  if(document.getElementById('radio2').checked == true){
+    var titulo = document.getElementById('Nome-do-site')
+    titulo.innerText = 'Iphone'
+    titulo.style.color = 'white'
+    var botão = document.querySelectorAll('.manual-btn')
+    botão.forEach((e)=>{
+      e.style.borderColor = 'white'
+    })
+
+    var link_site = document.getElementById('link_site')
+    link_site.href = 'https://mixtany.github.io/Quarto-site/'
+    var github = document.getElementById('github')
+    github.href = 'https://github.com/Mixtany/Quarto-site'
+  }
+
+  if(document.getElementById('radio3').checked == true){
+    var titulo = document.getElementById('Nome-do-site')
+    titulo.innerText = 'Jogo da Velha'
+    titulo.style.color = 'white'
+
+    var link_site = document.getElementById('link_site')
+    link_site.href = 'https://mixtany.github.io/Decimo-primeiro-site/'
+    var github = document.getElementById('github')
+    github.href = 'https://github.com/Mixtany/Decimo-primeiro-site'
+  }
+
+  if(document.getElementById('radio4').checked == true){
+    var titulo = document.getElementById('Nome-do-site')
+    titulo.innerText = 'Lista de Afazeres'
+    titulo.style.color = 'black'
+
+    var link_site = document.getElementById('link_site')
+    link_site.href = 'https://mixtany.github.io/Decimo-segundo-site/'
+    var github = document.getElementById('github')
+    github.href = 'https://github.com/Mixtany/Decimo-segundo-site'
+  }
+
+  if(document.getElementById('radio5').checked == true){
+    var titulo = document.getElementById('Nome-do-site')
+    titulo.innerText = 'Site de Viagens'
+    titulo.style.color = 'black'
+
+    var link_site = document.getElementById('link_site')
+    link_site.href = 'https://mixtany.github.io/Terceiro-site/'
+    var github = document.getElementById('github')
+    github.href = 'https://github.com/Mixtany/Terceiro-site'
+  }
+}
+//Carrocel
 
 
