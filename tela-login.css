@@ -250,6 +250,7 @@ main{
     --cordlow: #ffffff;
     --cordlow1: #ececec;
     --cordlow2: #262626;
+    --cordlow3: #E5EDE5;
 }
 
 #Tela-Dlow{
@@ -520,12 +521,21 @@ main{
 #menu-divider{
     position: relative;
 }
+
 #menuon{
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 110%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--cordlow1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.399);
 }
+
 
 /**Menu**/
 
@@ -536,10 +546,8 @@ main{
     height: 55px;
 }
 #pagina-principal{
-
-    margin-top: 5px;
     text-align: center;
-    height: 50px;
+    background-color: var(--cordlow);
 }
 
 #pagina-principal > h1{
@@ -550,6 +558,7 @@ main{
 
 #pagina-principal > p{
     margin-top: 5px;
+    margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
 }
@@ -557,10 +566,15 @@ main{
 /**Carrocel**/
 
 .slider{
-    margin: 0 auto;
-    width: 100vw;
-    height: 400px;
+    width: 95vw;
+    height: 250px;
     overflow: hidden;
+  }
+
+  #carrocelconteiner{
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 
   .slides{
@@ -579,12 +593,12 @@ main{
   }
 
   .slide img{
-    width: 100vw;
+    width: 95vw;
   }
 
   .manual-navigation{
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     margin-top: -60px;
     display: flex;
     justify-content: center;
@@ -608,22 +622,27 @@ main{
 
   #radio1:checked ~ .first{
     margin-left: 0;
+    transition: 1s;
   }
 
   #radio2:checked ~ .first{
     margin-left: -25%;
+    transition: 1s;
   }
 
   #radio3:checked ~ .first{
     margin-left: -50%;
+    transition: 1s;
   }
 
   #radio4:checked ~ .first{
     margin-left: -75%;
+    transition: 1s;
   }
 
   #radio5:checked ~ .first{
     margin-left: -100%;
+    transition: 1s;
   }
 
   .navigation-auto div{
@@ -636,7 +655,7 @@ main{
 
   .navigation-auto{
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     margin-top: 140px;
     display: flex;
     justify-content: center;
@@ -669,17 +688,17 @@ main{
   #texto{
     font-size: 0.6em;
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     margin-top: -110px;
     display: flex;
     justify-content: center;
   }
 
   #links{
-    gap: 50vw;
+    gap: 10vw;
     position: absolute;
-    width: 100vw;
-    margin-top: -190px;
+    width: 95vw;
+    margin-top: -5px;
     display: flex;
     justify-content: center;
   }
@@ -700,6 +719,7 @@ main{
   }
 
   #Nome-do-site{
+    display: none;
     font-family: Arial, Helvetica, sans-serif;
   }
 
@@ -727,8 +747,121 @@ main{
     color: white;
     border: 2px solid white;
 }
-
 /**Carrocel**/
+
+/**Primeira publicação**/
+#aviso{
+    margin-top: 5px;
+    padding: 15px;
+    background-color: var(--cordlow3);
+}
+
+#aviso > h1{
+    text-align: left;
+}
+
+#aviso > p:not(:last-child){
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+#aviso > p:not(:first-child){
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+#primeira-publicacao{
+    padding: 5px 0px;
+    margin-top: 25px;
+    width: 100%;
+    background-color: var(--cordlow3);
+}
+
+.pubperfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.imgperfil{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--cordlow2);
+}
+
+.nomeperfil{
+    font-size: 1.2em;
+    text-indent: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeP{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#imgprimeiro{
+    background-image: url("tela-login/Malu\ machado.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgpublicacao{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.imgpub{
+    cursor: pointer;
+    width: 85vw;
+    border: 2px solid var(--cordlow2);
+}
+
+.like{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.coracao{
+    position: relative;
+    background-image: url("tela-login/coração-sem-like.svg");
+    background-position: center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#coracao_info{
+    display: block;
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.textopuplicacao{
+    margin-top: 15px;
+}
+
+/**Primeira publicação**/
 /**Pagina Principal**/
 
 /**Dlow-home**/

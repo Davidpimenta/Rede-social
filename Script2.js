@@ -203,3 +203,46 @@ function sites(){
   }
 }
 //Carrocel
+//Publicacao
+
+//Publicacao1
+var coracao = document.querySelectorAll('.coracao')
+var msgcoracao = document.querySelector('.coracaomsg')
+var listac = []
+coracao.forEach((e, indice) => {
+    e.addEventListener('mouseenter', function coracaohover(){
+        if(listac.indexOf(indice) == -1){
+            e.style.backgroundImage = 'url("tela-login/coração-com-like-hover.svg")'
+        }
+        var divmsg = document.createElement('div')
+        divmsg.id = 'coracao_info'
+        var msg = document.createElement('p')
+        msg.textContent = 'Gostar'
+        divmsg.appendChild(msg)
+        e.appendChild(divmsg)
+    })
+
+    e.addEventListener('mouseout', function coracaoout(){
+        if(listac.indexOf(indice) == -1){
+            e.style.backgroundImage = 'url("tela-login/coração-sem-like.svg")'
+        }
+        var divmsg = document.getElementById('coracao_info')
+        divmsg.remove()
+    })
+
+    e.addEventListener('click', function coracaoon(){
+        if(listac.indexOf(indice) == -1){
+            listac.push(indice)
+            e.style.backgroundImage = 'url("tela-login/coração-com-like.svg")'
+        } else {
+            listac.splice(listac.indexOf(indice),1)
+            e.style.backgroundImage = 'url("tela-login/coração-sem-like.svg")'
+        }
+    })
+})
+
+
+
+
+//Publicacao1
+//Publicacao
