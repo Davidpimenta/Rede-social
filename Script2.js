@@ -241,8 +241,48 @@ coracao.forEach((e, indice) => {
     })
 })
 
+//Amplicaçãodaimagem
 
+var imgampliada = document.querySelectorAll('.imgpub')
+imgampliada.forEach((e) => {
+    e.addEventListener('click', function ampliar(){
+        var divampliada = document.createElement('div')
+        divampliada.className = 'divampliada'
+        var body = document.querySelector('body')
+        body.appendChild(divampliada)
+        divampliada.style.backgroundImage = `url(${e.src})` 
+        var ampliada = document.querySelectorAll('.divampliada')
+        ampliada.forEach((e) => {
+            e.addEventListener('click', function tirarampliado(){
+            e.remove()
+        })
+        })
+    })
+})
 
+//Amplicaçãodaimagem
+//Compartilhar
 
+var compartilhar = document.querySelectorAll('.compartilhar')
+compartilhar.forEach((e) => {
+    e.addEventListener('mouseenter', function compartilharenter(){
+        var divcomp = document.createElement('div')
+        divcomp.id = 'comp_info'
+        var msgcomp = document.createElement('p')
+        msgcomp.textContent = 'Compartilhar'
+        divcomp.appendChild(msgcomp)
+        e.appendChild(divcomp)
+    })
+
+    e.addEventListener('mouseout', function compout(){
+        var divcomp = document.getElementById('comp_info')
+        divcomp.remove()
+    })
+})
+//Compartilhar
 //Publicacao1
+
+//Publicacao2
+
+//Publicacao2
 //Publicacao

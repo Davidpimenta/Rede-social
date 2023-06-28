@@ -370,10 +370,10 @@ main{
     position: absolute;
     top: 110%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #info-pesquisar{
@@ -382,10 +382,10 @@ main{
     top: 108%;
     left: -38%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 
 }
 
@@ -403,10 +403,10 @@ main{
     top: 108%;
     left: -38%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #info-menu{
@@ -415,10 +415,10 @@ main{
     top: 108%;
     left: -15%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 /**Menu**/
@@ -476,10 +476,10 @@ main{
     top: 6%;
     left: -220%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #info-grupos{
@@ -488,10 +488,10 @@ main{
     top: 6%;
     left: -150%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #info-menssagens{
@@ -500,10 +500,10 @@ main{
     top: 6%;
     left: -210%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #info-publicar{
@@ -512,10 +512,10 @@ main{
     top: 6%;
     left: -170%;
     text-align: center;
-    background-color: var(--cordlow);
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--cordlow2);
+    border-radius: 10px;
 }
 
 #menu-divider{
@@ -773,8 +773,8 @@ main{
     font-size: 1.3em;
 }
 
-#primeira-publicacao{
-    padding: 5px 0px;
+.allpub{
+    padding: 20px 0px;
     margin-top: 25px;
     width: 100%;
     background-color: var(--cordlow3);
@@ -826,6 +826,29 @@ main{
     border: 2px solid var(--cordlow2);
 }
 
+
+.divampliada{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    padding: 5px;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 10px;
+    border: 2px solid var(--cordlow2);
+    z-index: 9999999;
+    cursor: pointer;
+}
+
+.imgampliada{
+    width: 100%;
+}
+
+
 .like{
     position: relative;
     display: flex;
@@ -859,9 +882,79 @@ main{
 
 .textopuplicacao{
     margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/**Footer**/
+
+
+.footer-footer{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--cordlow2);
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.compartilhar{
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('tela-login/compartilhar.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputcoment{
+    height: 30px;
+    text-indent: 5px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--cordlow2);
+}
+
+#comp_info{
+    display: block;
+    background-color: var(--cordlow2);
+    color: var(--cordlow);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.paragrafopub{
+    width: 80%;
+}
+/**Footer**/
 /**Primeira publicação**/
+
+/**Segunda publicação**/
+
+#imgsegundo{
+    background-image: url("tela-login/benjamin-perfil.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/**Segunda publicação**/
+
 /**Pagina Principal**/
 
 /**Dlow-home**/
