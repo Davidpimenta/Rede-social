@@ -205,7 +205,7 @@ function sites(){
 //Carrocel
 //Publicacao
 
-//Publicacao1
+//Publicacao
 var coracao = document.querySelectorAll('.coracao')
 var msgcoracao = document.querySelector('.coracaomsg')
 var listac = []
@@ -280,9 +280,46 @@ compartilhar.forEach((e) => {
     })
 })
 //Compartilhar
-//Publicacao1
 
-//Publicacao2
+//Descricao
 
-//Publicacao2
+var titulo_pessoal = document.querySelectorAll('.nomeP')
+var conteiner_titulo = document.querySelectorAll('.nomeperfil')
+var titulolist = []
+titulo_pessoal.forEach((e, indice) => {
+    e.addEventListener('mouseenter', function tituloenter(){
+        if(titulolist.indexOf(indice) == -1){
+            titulolist.push(indice)
+            var titulo_perfil = document.createElement('div')
+            titulo_perfil.className = 'descricao'
+            var titulo_msg = document.createElement('p')
+            
+            if(indice == 0){
+                titulo_msg.textContent = 'Artista'
+            }
+
+            if(indice == 1){
+                titulo_msg.textContent = 'Positivista'
+            }
+
+            if(indice == 2){
+                titulo_msg.textContent = 'Desempregado'
+            }
+            if(indice == 3){
+                titulo_msg.textContent = 'Inimigo do namoro'
+            }
+            titulo_perfil.appendChild(titulo_msg)
+            conteiner_titulo[indice].appendChild(titulo_perfil)
+        }
+    })
+
+    e.addEventListener('mouseout', function tituloout(){
+        var titulo_perfil = document.querySelector('.descricao')
+        titulo_perfil.remove()
+        titulolist.splice(titulolist.indexOf(indice),1)
+    })
+})
+
+//Descricao
+
 //Publicacao
